@@ -97,10 +97,9 @@ Use the addFlavor function below to do the following:
 //two params array and string, method unshift()
 function addFlavor(array, string){
  /*your code here*/
- return array.unshift(string);
+ array.unshift(string);
+ return array;
 }
-
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
 
@@ -114,7 +113,8 @@ Use the removeLastFlavor function below to do the following:
 //one param array, method pop()
 function removeLastFlavor(array){
  /*your code here*/
- return array.pop();
+  array.pop();
+  return array;
 }
 
 
@@ -154,7 +154,7 @@ Use the removeFlavorByName function below to do the following:
 function removeFlavorByName(array, string){
   /*your code here*/
   for(let i = 0; i < array.length; i ++){
-    if(array[i].includes(string)){
+    if(array[i] === string){
       array.splice(i,1)
     }
   }
@@ -193,7 +193,6 @@ function filterByWord(array, string){
   }
   return filtered;
 }
-console.log('task 7', filterByWord(originalFlavors, 'Chocolate'))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -207,10 +206,11 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(array){
   /*code here*/
-}
 
+}
+console.log('strech task' , getAverageWordLength(originalFlavors))
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
