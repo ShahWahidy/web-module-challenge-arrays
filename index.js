@@ -208,7 +208,17 @@ Use the getAverageWordLength function below to do the following:
 
 function getAverageWordLength(array){
   /*code here*/
-
+  let numOfWords = 0;
+  for(let i = 0 ; i < array.length;  i ++ ){
+    let string = array[i];
+    while(string.includes(' ')){
+      numOfWords++;
+      let space = string.indexOf(' ');
+      string = string.slice(space +1)
+    }
+    numOfWords++;
+  }
+  return numOfWords / array.length;
 }
 console.log('strech task' , getAverageWordLength(originalFlavors))
 
